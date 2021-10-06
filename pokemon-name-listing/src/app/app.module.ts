@@ -8,11 +8,12 @@ import { InMemoryCache } from '@apollo/client/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PokemonNameListingComponent } from './pokemon-name-listing/pokemon-name-listing.component'
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, PokemonNameListingComponent
   ],
   imports: [
     BrowserModule,
