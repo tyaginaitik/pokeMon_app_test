@@ -1,7 +1,10 @@
 # PokemonNameListing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
+## Install all plugin
+
+Run `npm install` to install all node module
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -25,3 +28,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+**Incomplete Task due to GraphQl query not have any option to fetch all count of data, so due to this reason i am unable to provide complete functionality. Thanks**
