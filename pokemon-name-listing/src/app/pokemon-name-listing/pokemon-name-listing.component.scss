@@ -1,0 +1,97 @@
+/*----  Main Style  ----*/
+#cards_landscape_wrap-2 {
+  text-align: center;
+  background: #F7F7F7;
+
+  .container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  a {
+    text-decoration: none;
+    outline: none;
+  }
+
+  .card-flyer {
+    border-radius: 5px;
+    background: #105ae1;
+    margin-top: 50px;
+    transition: all 0.2s ease-in;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+
+    .image-box {
+      background: white;
+      overflow: hidden;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+      border-radius: 5px;
+
+      img {
+        transition: all .9s ease;
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    &:hover {
+      background: #1459da;
+      box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+      transition: all 0.2s ease-in;
+      margin-top: 50px;
+
+      .image-box {
+        img {
+          opacity: 0.7;
+          transform: scale(1.15);
+        }
+      }
+    }
+
+    .text-box {
+      text-align: center;
+      color: white;
+      padding-bottom: 3em;
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: left;
+
+        &.card-text {
+          font-style: italic;
+        }
+      }
+
+      .text-container {
+        padding: 1em;
+      }
+
+      h6 {
+        margin-top: 0px;
+        margin-bottom: 4px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .counter {
+        counter-reset: section;
+        text-align: left;
+
+        .section-counter {
+          &::before {
+            counter-increment: section;
+            content: counter(section) ": ";
+          }
+        }
+      }
+      .view-btn{
+        bottom: 1em;
+      }
+    }
+  }
+}

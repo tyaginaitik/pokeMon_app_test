@@ -1,14 +1,34 @@
-<div class="card" style="width: 18rem;" *ngFor="let pokemon of pokemonNameList">
-  <img src="" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Details:-</h5>
-    <p class="card-text">Name: {{pokemon.name}}</p>
-    <p class="card-text">Weight: {{pokemon.weight}}</p>
-    <p class="card-text">Height: {{pokemon.height}}</p>
-    <p class="card-text">List of abilities:-</p>
-    <div *ngFor="let abilities of pokemon.pokemon_v2_pokemonabilities">
-      {{abilities.pokemon_v2_ability.name}}
+<!-- Pokemon Cards -->
+<div id="cards_landscape_wrap-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 flex-grow-1" *ngFor="let pokemon of pokemonNameList">
+        <a href="" class="d-flex h-100">
+          <div class="card-flyer w-100">
+            <div class="text-box h-100 position-relative mb-4">
+              <div class="image-box">
+                <img
+                  src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{pokemon.id}}.png'
+                  class="card-img-top" alt="...">
+              </div>
+              <div class="text-container">
+                <h6>{{pokemon.name}}</h6>
+                <p class="card-text"><strong>Weight:</strong> {{pokemon.weight}}</p>
+                <p class="card-text"><strong>Height:</strong> {{pokemon.height}}</p>
+                <p class="card-text"><strong>List of abilities:-</strong></p>
+                <div class="counter">
+                  <div class="section-counter" *ngFor="let abilities of pokemon.pokemon_v2_pokemonabilities">
+                    {{abilities.pokemon_v2_ability.name}}
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center align-items-center p-4 m-2 position-absolute w-100 view-btn">
+                <button href="#" class="btn btn-warning position-absolute">View Full Details</button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
-    <a href="#" class="btn btn-primary">View Full Details</a>
   </div>
 </div>
