@@ -1,6 +1,20 @@
 <!-- Pokemon Cards -->
-<div id="cards_landscape_wrap-2">
+<div id="cards_landscape_wrap-2" *ngIf="pokemonNameList?.length">
   <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <label for="typeahead-basic">Search on name/abilities:</label>
+        <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="searchFilter" [ngbTypeahead]="search" />
+      </div>
+      <div class="col-6 pt-4">
+        <ngb-pagination class="d-flex justify-content-end" size="sm" [collectionSize]="70" [(page)]="page"
+          aria-label="Custom pagination">
+          <ng-template ngbPaginationPrevious>Prev</ng-template>
+          <ng-template ngbPaginationNext>Next</ng-template>
+          <ng-template ngbPaginationNumber let-p>{{ getPageSymbol(p) }}</ng-template>
+        </ngb-pagination>
+      </div>
+    </div>
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 flex-grow-1" *ngFor="let pokemon of pokemonNameList">
         <a href="" class="d-flex h-100">
@@ -28,6 +42,16 @@
             </div>
           </div>
         </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col pt-4">
+        <ngb-pagination class="d-flex justify-content-end" size="sm" [collectionSize]="70" [(page)]="page"
+          aria-label="Custom pagination">
+          <ng-template ngbPaginationPrevious>Prev</ng-template>
+          <ng-template ngbPaginationNext>Next</ng-template>
+          <ng-template ngbPaginationNumber let-p>{{ getPageSymbol(p) }}</ng-template>
+        </ngb-pagination>
       </div>
     </div>
   </div>
