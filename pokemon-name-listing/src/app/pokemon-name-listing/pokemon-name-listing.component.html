@@ -1,10 +1,14 @@
-<p>pokemon-name-listing works!</p>
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+<div class="card" style="width: 18rem;" *ngFor="let pokemon of pokemonNameList">
+  <img src="" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Details:-</h5>
+    <p class="card-text">Name: {{pokemon.name}}</p>
+    <p class="card-text">Weight: {{pokemon.weight}}</p>
+    <p class="card-text">Height: {{pokemon.height}}</p>
+    <p class="card-text">List of abilities:-</p>
+    <div *ngFor="let abilities of pokemon.pokemon_v2_pokemonabilities">
+      {{abilities.pokemon_v2_ability.name}}
+    </div>
+    <a href="#" class="btn btn-primary">View Full Details</a>
   </div>
 </div>
